@@ -86,8 +86,8 @@ window.location.reload();
                     {Text}
 
                 </Button>
-                <Link to="/cv-online"></Link>
-           <Button style={style} component={Link} to="/cv-online/basic/Experience">Previous</Button>
+                <Link to="/top-cv"></Link>
+           <Button style={style} component={Link} to="/top-cv/basic/Experience">Previous</Button>
            <Button  
                 type="submit" 
                 variant="contained" 

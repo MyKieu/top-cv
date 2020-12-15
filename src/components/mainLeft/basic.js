@@ -77,7 +77,7 @@ function Basic() {
       <div className="left">
         <div className="headerLeft">
           <div styles={{ flexGrow: 2 }}>
-            <Link to="/cv-online" style={{ textAlign: "left" }}>
+            <Link to="/top-cv" style={{ textAlign: "left" }}>
               <img src='https://previews.123rf.com/images/twindesigner/twindesigner1704/twindesigner170403173/76708418-cv-c-v-black-letter-logo-design-with-purple-magenta-swoosh-and-stars-.jpg' alt="logo" className="img2" />
             </Link>
           </div>
@@ -85,28 +85,28 @@ function Basic() {
         </div>
         <Router>
           <div className="topLeft">
-            <Button className="headerLeft" component={Link} to="/cv-online/basic/header">
+            <Button className="headerLeft" component={Link} to="/top-cv/basic/header">
               Header
             </Button>
 
             <Button
               className="headerLeft"
               component={Link}
-              to="/cv-online/basic/education"
+              to="/top-cv/basic/education"
             >
               Education
             </Button>
             <Button
               className="headerLeft"
               component={Link}
-              to="/cv-online/basic/experience"
+              to="/top-cv/basic/experience"
             >
               Experience
             </Button>
             <Button
               className="headerLeft"
               component={Link}
-              to="/cv-online/basic/addittional"
+              to="/top-cv/basic/addittional"
             >
               Skills
             </Button>
@@ -114,16 +114,16 @@ function Basic() {
           
           <div className="formsSection">
             <Switch>
-              <Route path="/cv-online/basic/header">
+              <Route path="/top-cv/basic/header">
                 <Header />
               </Route>
-              <Route path="/cv-online/basic/experience">
+              <Route path="/top-cv/basic/experience">
                 <Experience />
               </Route>
-              <Route path="/cv-online/basic/education">
+              <Route path="/top-cv/basic/education">
                 <Education />
               </Route>
-              <Route path="/cv-online/basic/addittional">
+              <Route path="/top-cv/basic/addittional">
                 <Skill />
               </Route>
             </Switch>

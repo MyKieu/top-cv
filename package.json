@@ -2,7 +2,7 @@
   "name": "project-cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MyKieu.github.io/cv-online/",
+  "homepage": "https://MyKieu.github.io/top-cv/",
   "dependencies": {
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.11.2",
@@ -13,7 +13,6 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.3.0",
     "create-react-context": "^0.3.0",
-    "gh-pages": "^3.1.0",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.1",
     "react-cv": "^1.2.0",
@@ -52,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

@@ -15,7 +15,7 @@ function RightHeader() {
   return (
     <div>
       <div className="headerR">
-        <div className="contentHeader">
+        <div className="">
           <h1 className="h1Name">{contentUse.header.name}
           </h1>
            <img className='imgg1' src ={contentUse.header.img} alt=''></img>

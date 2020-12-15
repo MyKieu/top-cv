@@ -131,8 +131,8 @@ function Header() {
           style={style}
           onChange={handleSubmit(onSubmit)}
         />
-        <Link to="/cv-online"></Link>
-        <Button   style={style} component={Link} to="/cv-online/basic/Education">
+        <Link to="/top-cv"></Link>
+        <Button   style={style} component={Link} to="/top-cv/basic/Education">
           Next
         </Button>
           <Button
