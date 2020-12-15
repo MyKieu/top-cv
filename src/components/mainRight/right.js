@@ -64,7 +64,7 @@ function Right() {
         </Link>
 
         <PdfContainer className='pdf'  createPdf={createPdf}>
-          <Paper />
+          <Paper className='pp'/>
         </PdfContainer>
       </div>
       

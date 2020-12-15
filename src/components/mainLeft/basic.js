@@ -6,8 +6,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Header from "./Header";
 import Skill from "./Skill";
-import logo from "asset/logoCV.jpg";
-
+import './style.css'
 const useStyles = makeStyles({
   rootAdd: {
     background: "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",

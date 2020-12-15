@@ -19,13 +19,11 @@ export default (props) => {
     <section className="pdf-container">
       <section className="pdf-toolbar">
        {/* <button onClick={createPdf}>Create PDF</button> */}
-       <Link href="/top-cv" onClick={createPdf}>
           <Tooltip title="Save to PDF" placement="right">
             <Avatar   style={style}>
-              <PictureAsPdfIcon />
+              <PictureAsPdfIcon onClick={createPdf} />
             </Avatar>
           </Tooltip>
-        </Link>
       </section>
       <section className="pdf-body" ref={bodyRef}>
         {props.children}

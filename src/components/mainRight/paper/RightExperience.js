@@ -37,7 +37,7 @@ function RightExperience() {
   return (
     <div className="rightExperence">
       <div className="">
-        <h3>{title}</h3>
+        <h3 >{title}</h3>
         <p>
           <strong>{contentUse.experience.company}</strong> {""}
           <p>{contentUse.experience.city}</p>
