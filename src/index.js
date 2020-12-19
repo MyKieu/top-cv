@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './contents/App';
 import reportWebVitals from './reportWebVitals';
+import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
+import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux';
+import { translations } from 'translation/translation';
+import store from 'contents/SavePDF/store';
 
+
+let reducers = combineReducers(Object.assign({}, { Intl }))
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+     <Provider store={store}>
+    <IntlProvider translations={translations} locale='vi'>
+      <App />
+    </IntlProvider>
+  </Provider>,
+
   document.getElementById('root')
 );
 

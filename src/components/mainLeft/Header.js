@@ -4,13 +4,14 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { useTranslate } from "react-redux-multilingual/lib/context";
 const style = {
   marginTop: 12,
   marginLeft: 8,
   marginRight: 8,
 };
-
 function Header() {
+  const t=useTranslate()
   const { content, updateHeaderData, removeData } = useContext(Context);
   const { register, handleSubmit, errors } = useForm();
   const { setContent } = useContext(Context);
@@ -27,13 +28,18 @@ function Header() {
     });
     window.location.reload();
   };
+  const styles={
+    color:'red',
+    marginLeft:8
+    
+  }
   return (
     <div className="">
-      <h2>Header</h2>
+      <h2>{t('header')}</h2>
       <form className="form" noValidate autoComplete="off">
         <TextField
           id="outlined-basic"
-          label="Full Name"
+          label={t('FullName')}
           name="name"
           variant="outlined"
           defaultValue={content.header.name}
@@ -42,23 +48,11 @@ function Header() {
           onChange={handleSubmit(onSubmit)}
         />
         {errors.name && errors.name.type === "required" && (
-          <p>Please not empty</p>
+          <p style={styles}>Please not empty</p>
         )}
-      
-        {/* <TextField
-          id="outlined-basic"
-          label="Gender"
-          variant="outlined"
-          name="gender"
-          type='radio'
-          defaultValue={content.header.gender}
-          inputRef={register}
-          style={style}
-          onChange={handleSubmit(onSubmit)}
-        /> */}
           <TextField
           id="outlined-basic"
-          label="Image"
+          label={t('Image')}
           variant="outlined"
           name="img"
        
@@ -74,15 +68,15 @@ function Header() {
           ref={register}
           onChange={handleSubmit(onSubmit)}
         >
-          <option value='' disabled selected>Choose your gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
+          <option value='' disabled selected>{t('ChooseYourGender')}</option>
+          <option value="Male">{t('Male')}</option>
+          <option value="Female">{t('Female')}</option>
           
         </select>
       
         <TextField
           id="outlined-basic"
-          label="Email"
+          label={t('Email')}
           name="email"
           variant="outlined"
           defaultValue={content.header.email}
@@ -94,14 +88,14 @@ function Header() {
           onChange={handleSubmit(onSubmit)}
         />
         {errors.email && errors.email.type === "required" && (
-          <p>Please not email</p>
+          <p style={styles}>Please not email</p>
         )}
         {errors.email && errors.email.type === "pattern" && (
-          <p>This is field required email</p>
+          <p style={styles}>This is field required email</p>
         )}
         <TextField
           id="outlined-basic"
-          label="Phone"
+          label={t('Phone')}
           name="phone"
           variant="outlined"
           defaultValue={content.header.phone}
@@ -112,7 +106,7 @@ function Header() {
 
         <TextField
           id="outlined-basic"
-          label="Address"
+          label={t('Address')}
           name="address"
           variant="outlined"
           defaultValue={content.header.address}
@@ -123,7 +117,7 @@ function Header() {
 
         <TextField
           id="outlined-basic"
-          label="City"
+          label={t('City')}
           variant="outlined"
           name="city"
           defaultValue={content.header.city}
@@ -133,7 +127,7 @@ function Header() {
         />
         <Link to="/top-cv"></Link>
         <Button   style={style} component={Link} to="/top-cv/basic/Education">
-          Next
+         {t('Next')} 
         </Button>
           <Button
             type="submit"
@@ -143,7 +137,7 @@ function Header() {
             style={style}
             onClick={handleDelete}
           >
-            Delete
+            {t('Delete')}
           </Button>
       </form>
     </div>

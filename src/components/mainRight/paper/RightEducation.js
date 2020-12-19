@@ -24,11 +24,12 @@ function RightEducation() {
         <div className="rightExperence">
             <div className="">
                 <h3>  {title}</h3>
-                <p>{contentUse.education.institition}</p>
-                <p>{contentUse.education.city}</p>
+                <ul>
+              <p>{contentUse.education.institition}</p>
+                 <p>{contentUse.education.city}</p> 
                 <p>{contentUse.education.major}</p>
-                <p>{contentUse.education.gradution}</p>
-                <p>{contentUse.education.add}</p>
+               <p>{contentUse.education.add}</p>
+                </ul>
             </div>
         </div>
     )

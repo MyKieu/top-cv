@@ -2,6 +2,7 @@ import { Button, TextField } from '@material-ui/core'
 import { Context } from 'contexts/context';
 import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslate } from 'react-redux-multilingual/lib/context';
 import { Link } from 'react-router-dom';
 import './style.css';
 const style = {
@@ -10,6 +11,7 @@ const style = {
     marginRight: 8
 }
 function Skill() {
+    const t=useTranslate()
     const {content , updateSkillData, removeData,setContent} = useContext(Context);
     const [Text, setText] = useState("Add")
     const {register, handleSubmit} = useForm();
@@ -31,7 +33,7 @@ window.location.reload();
     }
     return (
         <div className="skill">
-            <h2>Additional Skills</h2>
+            <h2>{t('skill')}</h2>
             <form 
                 className='form'
                 noValidate 
@@ -83,11 +85,11 @@ window.location.reload();
                 style={style}
                 
                 >
-                    {Text}
+                    {t('Text')}
 
                 </Button>
                 <Link to="/top-cv"></Link>
-           <Button style={style} component={Link} to="/top-cv/basic/Experience">Previous</Button>
+           <Button style={style} component={Link} to="/top-cv/basic/Experience">{t('Previous')}</Button>
            <Button  
                 type="submit" 
                 variant="contained" 
@@ -96,7 +98,7 @@ window.location.reload();
                 style={style}
                 onClick={handleDeleteSkill}
                 >
-                    Delete
+                    {t('Delete')}
                 </Button>
             </form>
         </div>

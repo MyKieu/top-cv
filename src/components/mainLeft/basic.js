@@ -1,6 +1,7 @@
 import { Button, makeStyles } from "@material-ui/core";
 import { Context } from "contexts/context";
 import React, { useContext } from "react";
+import { useTranslate } from "react-redux-multilingual/lib/context";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Education from "./Education";
 import Experience from "./Experience";
@@ -42,6 +43,7 @@ const useStyles = makeStyles({
 });
 
 function Basic() {
+  const t=useTranslate()
   const { control, addFakeData, removeData } = useContext(Context);
   const classes = useStyles();
   function useFakeData(e) {
@@ -84,30 +86,30 @@ function Basic() {
         </div>
         <Router>
           <div className="topLeft">
-            <Button className="headerLeft" component={Link} to="/top-cv/basic/header">
-              Header
+            <Button  component={Link} to="/top-cv/basic/header">
+              {t('header')}
             </Button>
 
             <Button
-              className="headerLeft"
+           
               component={Link}
               to="/top-cv/basic/education"
             >
-              Education
+              {t('education')}
             </Button>
             <Button
-              className="headerLeft"
+            
               component={Link}
               to="/top-cv/basic/experience"
             >
-              Experience
+              {t('experience')}
             </Button>
             <Button
-              className="headerLeft"
+             
               component={Link}
               to="/top-cv/basic/addittional"
             >
-              Skills
+              {t('skill')}
             </Button>
           </div>
           

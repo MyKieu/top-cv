@@ -2,6 +2,7 @@ import { Button, TextField } from "@material-ui/core";
 import { Context } from "contexts/context";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslate } from "react-redux-multilingual/lib/context";
 import { Link } from "react-router-dom";
 import "./style.css";
 const style = {
@@ -11,6 +12,7 @@ const style = {
 };
 
 function Experience() {
+  const t=useTranslate()
   const { content, updateExperienceData, removeData ,setContent} = useContext(Context);
   const [Text, setText] = useState("Add");
   const { register, handleSubmit } = useForm();
@@ -30,7 +32,7 @@ function Experience() {
   }
   return (
     <div className="experience">
-      <h2>Professional Experience</h2>
+      <h2>{t('experience')}</h2>
       <form
         className="form"
         noValidate
@@ -40,7 +42,7 @@ function Experience() {
         <h4>Company 1</h4>
         <TextField
           id="outlined-basic"
-          label="Company"
+          label={t('Company')}
           name="company"
           variant="outlined"
           style={style}
@@ -49,7 +51,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="City/State/Country"
+          label={t('State')}
           name="city"
           variant="outlined"
           style={style}
@@ -58,7 +60,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Position"
+          label={t('Position')}
           name="position"
           variant="outlined"
           style={style}
@@ -67,7 +69,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label={t('start')}
           name="start"
           variant="outlined"
           style={style}
@@ -76,7 +78,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label={t('end')}
           name="end"
           variant="outlined"
           style={style}
@@ -85,7 +87,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Descrition"
+          label={t('Descrition')}
           name="description[0]"
           variant="outlined"
           style={style}
@@ -94,7 +96,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Descrition"
+          label={t('Descrition')}
           name="description[1]"
           variant="outlined"
           style={style}
@@ -107,7 +109,7 @@ function Experience() {
 
         <TextField
           id="outlined-basic"
-          label="Company"
+          label={t('Company')}
           name="company2"
           variant="outlined"
           style={style}
@@ -116,7 +118,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="City/State/Country"
+          label={t('State')}
           name="city2"
           variant="outlined"
           style={style}
@@ -125,7 +127,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Position"
+          label={t('Position')}
           name="position2"
           variant="outlined"
           style={style}
@@ -134,7 +136,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label={t('start')}
           name="start2"
           variant="outlined"
           style={style}
@@ -143,7 +145,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label={t('end')}
           name="end2"
           variant="outlined"
           style={style}
@@ -152,7 +154,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Descrition"
+          label={t('Descrition')}
           name="description2[0]"
           variant="outlined"
           style={style}
@@ -161,7 +163,7 @@ function Experience() {
         />
         <TextField
           id="outlined-basic"
-          label="Descrition"
+          label={t('Descrition')}
           name="description2[1]"
           variant="outlined"
           style={style}
@@ -176,14 +178,14 @@ function Experience() {
           style={style}
          
         >
-          {Text}
+          {t('Text')}
         </Button>
         <Link to="/top-cv"></Link>
         <Button style={style} component={Link} to="/top-cv/basic/addittional">
-          Next
+        {t('Next')} 
         </Button>
         <Link to='/top-cv'/>
-        <Button style={style} component={Link} to='/top-cv/basic/Education'>Previous</Button>
+        <Button style={style} component={Link} to='/top-cv/basic/Education'>{t('Previous')}</Button>
         <Button
           type="submit"
           variant="contained"
@@ -192,7 +194,7 @@ function Experience() {
           style={style}
           onClick={handleDeleteExp}
         >
-          Delete
+          {t('Delete')}
         </Button>
       </form>
     </div>

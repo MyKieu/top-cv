@@ -12,9 +12,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100%;
-    align-items: center;
-   
+  
 }
 .contentHeader{
     width: 80%;
@@ -51,3 +49,11 @@
 .pp{
     background-color: bisque;
 }
+.imgg1{
+    width: 200px;
+    margin-top: 60px;
+    margin-left: 60px;
+    float:left;
+    margin-bottom: 30px;
+   
+  }

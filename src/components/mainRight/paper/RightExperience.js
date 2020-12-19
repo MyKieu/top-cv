@@ -38,24 +38,30 @@ function RightExperience() {
     <div className="rightExperence">
       <div className="">
         <h3 >{title}</h3>
+        <ul>
         <p>
           <strong>{contentUse.experience.company}</strong> {""}
           <p>{contentUse.experience.city}</p>
         </p>
+       
         <p>
-          {contentUse.experience.position} {contentUse.experience.start} {""}
-          {contentUse.experience.end}
+          {contentUse.experience.position}
+        <p>   {contentUse.experience.start} </p>
+           {""}
+        <p> {contentUse.experience.end}</p> 
         </p>
+        </ul>
         <ul>{Description1}</ul>
-
+<ul>
         <p>
           <strong>{contentUse.experience.company2}</strong> {""}
           <p>{contentUse.experience.city2}</p>
         </p>
         <p>
-          {contentUse.experience.position2} {contentUse.experience.start2} {""}
+         <p> {contentUse.experience.position2}</p> 
+         <p>{contentUse.experience.start2}</p> {""}
           {contentUse.experience.end2}
-        </p>
+        </p></ul>
         <ul>{Description2}</ul>
       </div>
     </div>

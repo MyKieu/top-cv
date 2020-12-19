@@ -4,7 +4,8 @@ import RightExperience from "./RightExperience";
 import RightHeader from "./RightHeader";
 import RightSkill from "./RightSkill";
 import "../rightStyle.css";
-;
+
+
 function Paper() {
   // const createPdf = (html) => {
   //   savePDF(html, {
@@ -16,8 +17,9 @@ function Paper() {
 
   return (
     <div className="paper">
-      <div style={{ size: "A4" }}>
+      <div style={{ size: "A4"  }}>
         {/* <PdfContainer createPdf={createPdf}> */}
+     
           <RightHeader />
           <RightEducation />
           <RightExperience />

@@ -2,6 +2,7 @@ import { Button, StepContent, TextField } from "@material-ui/core";
 import { Context } from "contexts/context";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useTranslate } from "react-redux-multilingual/lib/context";
 import { Link } from "react-router-dom";
 import "./style.css";
 const style = {
@@ -10,6 +11,7 @@ const style = {
   marginRight: 8,
 };
 function Education() {
+  const t=useTranslate()
   const { content, updateEducationData, removeData } = useContext(Context);
   const [Text, setText] = useState("add");
   const { register, handleSubmit } = useForm();
@@ -32,7 +34,7 @@ window.location.reload();
   }
   return (
     <div className="education">
-      <h2>Education</h2>
+      <h2>{t('education')}</h2>
       <form
         className="form"
         noValidate
@@ -41,7 +43,7 @@ window.location.reload();
       >
         <TextField
           id="outlined-basic"
-          label="Institution"
+          label={t('Institution')}
           name="institition"
           variant="outlined"
           inputRef={register}
@@ -50,7 +52,7 @@ window.location.reload();
         />
         <TextField
           id="outlined-basic"
-          label="City/State/Country"
+          label={t('City')}
           name="city"
           variant="outlined"
           inputRef={register}
@@ -59,7 +61,7 @@ window.location.reload();
         />
         <TextField
           id="outlined-basic"
-          label="Major"
+          label={t('Major')}
           name="major"
           variant="outlined"
           inputRef={register}
@@ -68,7 +70,7 @@ window.location.reload();
         />
         <TextField
           id="outlined-basic"
-          label="Gradution Year"
+          label={t('Graduation')}
           name="gradution"
           variant="outlined"
           inputRef={register}
@@ -77,7 +79,7 @@ window.location.reload();
         />
         <TextField
           id="outlined-basic"
-          label="Additional Info"
+          label={t('AddIn')}
           name="add"
           variant="outlined"
           inputRef={register}
@@ -91,14 +93,15 @@ window.location.reload();
           disableElevation
           style={style}
         >
-          {Text}
+         
+          {t('Text')}
         </Button>
         <Link to="/top-cv"></Link>
         <Button   style={style} component={Link} to="/top-cv/basic/Experience">
-           Next
+        {t('Next')} 
         </Button>
         <Link to ='/top-cv'></Link>
-        <Button   style={style} component={Link} to='/top-cv/basic/Header'>Previous</Button>
+        <Button   style={style} component={Link} to='/top-cv/basic/Header'>{t('Previous')}</Button>
         <Button
           type="submit"
           variant="contained"
@@ -107,7 +110,7 @@ window.location.reload();
           style={style}
           onClick ={handleDeleteEdu}
         >
-          Delete
+          {t('Delete')}
         </Button>
       </form>
     </div>

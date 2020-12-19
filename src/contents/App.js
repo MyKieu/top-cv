@@ -4,9 +4,6 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Right from 'components/mainRight/right';
 import { Button, makeStyles } from '@material-ui/core';
 import ContentProvider from 'contexts/context';
-
-
-
 function Templates() {
   const useStyles = makeStyles({
     headerLink: {
@@ -59,8 +56,9 @@ function App() {
           </Switch>
         </BrowserRouter>
         <Right />
+       
       </ContentProvider>
-      
+     
     </div>
   );
 }
