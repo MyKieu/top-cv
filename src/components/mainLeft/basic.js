@@ -105,7 +105,6 @@ function Basic() {
               {t('experience')}
             </Button>
             <Button
-             
               component={Link}
               to="/top-cv/basic/addittional"
             >

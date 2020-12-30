@@ -16,10 +16,9 @@ function Paper() {
   // };
 
   return (
-    <div className="paper">
-      <div style={{ size: "A4"  }}>
+    <div>
+      <div className='PDF'>
         {/* <PdfContainer createPdf={createPdf}> */}
-     
           <RightHeader />
           <RightEducation />
           <RightExperience />

@@ -56,7 +56,6 @@ function App() {
           </Switch>
         </BrowserRouter>
         <Right />
-       
       </ContentProvider>
      
     </div>

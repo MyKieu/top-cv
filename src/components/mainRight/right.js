@@ -76,8 +76,7 @@ function Right() {
               <ClearIcon />
             </Avatar>
           </Tooltip>
-        </Link>
-        
+        </Link>  
         <Link href="/top-cv">
           <Tooltip title="View" placement="right">
             <Avatar className={classes.green}></Avatar>
@@ -87,17 +86,11 @@ function Right() {
             <Avatar onClick={()=>handleChangeClick()} className={classes.change}>
           <GTranslateIcon />
             </Avatar>
-            
           </Tooltip>
         <PdfContainer className='pdf'  createPdf={createPdf}>
           <Paper className='pp'/>
-        </PdfContainer>
-        
-       
+        </PdfContainer> 
       </div>
-      
-  
-        
         </div>
     
   );

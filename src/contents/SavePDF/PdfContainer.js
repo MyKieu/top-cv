@@ -2,11 +2,8 @@ import React from 'react';
 import Tooltip from "@material-ui/core/Tooltip";
 import Avatar from "@material-ui/core/Avatar";
 import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
-
-
- 
-
 export default (props) => {
+  console.log(props);
  const style={
    background:'blue',
    marginTop:'10px',
@@ -14,6 +11,7 @@ export default (props) => {
  } 
  
   const bodyRef = React.createRef();
+  console.log(bodyRef);
   const createPdf = () => props.createPdf(bodyRef.current);
   return (
     <section className="pdf-container">

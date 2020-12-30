@@ -12,24 +12,22 @@ function RightHeader() {
   }
 
   return (
-    <div>
-      <div className="headerR">
-        <div className="">
+    <div className='row'>
+      <div className="col-xs-6">
+      
         <img className='imgg1' src ={contentUse.header.img} alt=''></img>
-          <h1 className="h1Name">{contentUse.header.name}
-          </h1>
-          
-          <p>
+        </div>
+          <div className="col-xs-6" className="headerR">
+          <h1 className="h1Name">{contentUse.header.name} </h1>
             {contentUse.header.gender} <br />
             {contentUse.header.email} <br />
             {contentUse.header.phone} <br />
             {contentUse.header.address} <br />
             {contentUse.header.city} <br />
-          </p>
+          </div>
           <hr className="hrrr"></hr>
-        </div>
       </div>
-    </div>
+    
   );
 }
 

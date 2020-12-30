@@ -44,8 +44,6 @@ const ContentProvider = (props) =>{
     useEffect(() => {
         localStorage.setItem('dataLocal' , JSON.stringify(content))
     },[content])
-
-
     return(
     <Context.Provider
         value = {{
